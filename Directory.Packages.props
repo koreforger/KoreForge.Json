@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <KoreForgeVersion Condition="'$(KOREFORGE_VERSION)' != ''">$(KOREFORGE_VERSION)</KoreForgeVersion>
-    <KoreForgeVersion Condition="'$(KoreForgeVersion)' == ''">0.0.0-alpha.0</KoreForgeVersion>
+    <KoreForgeVersion Condition="'$(KoreForgeVersion)' == ''">0.0.7-alpha</KoreForgeVersion>
   </PropertyGroup>
 
   <!-- KoreForge sibling packages -->
