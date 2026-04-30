@@ -1,5 +1,5 @@
-using KF.Jex.Functions;
 using KF.Json;
+using KoreForge.Jex;
 using Newtonsoft.Json.Linq;
 
 namespace KF.Json.Jex;
@@ -12,30 +12,30 @@ public sealed class ExpandJsonFunction : IJexFunction
 {
     private static readonly JsonMaterializerOptions DefaultOptions = new() { MaxDepth = 10 };
 
-    public string Name => "expandJson";
-
-    public JToken Invoke(JToken input, JToken[] args)
+    public JexValue Invoke(JexExecutionContext context, IReadOnlyList<JexValue> args)
     {
-        if (args.Length == 0)
-            return JValue.CreateNull();
+        if (args.Count == 0)
+            return JexValue.Null;
 
-        var path = args[0].Value<string>();
+        var path = args[0].AsString();
         if (string.IsNullOrWhiteSpace(path))
-            return JValue.CreateNull();
+            return JexValue.Null;
 
-        var target = input.SelectToken(path);
+        var target = context.Input.SelectToken(path);
         if (target is null)
-            return JValue.CreateNull();
+            return JexValue.Null;
 
-        int maxDepth = args.Length > 1 ? args[1].Value<int>() : DefaultOptions.MaxDepth;
+        int maxDepth = args.Count > 1 ? (int)args[1].AsNumber() : DefaultOptions.MaxDepth;
 
+        JToken expanded;
         if (target.Type == JTokenType.String)
         {
-            var expanded = JsonMaterializer.Expand(target, new JsonMaterializerOptions { MaxDepth = maxDepth });
-            return expanded;
+            expanded = JsonMaterializer.Expand(target, new JsonMaterializerOptions { MaxDepth = maxDepth });
+            return JexValue.FromJson(expanded);
         }
 
         // If already an object/array, still run materialiser in case nested fields are escaped
-        return JsonMaterializer.Expand(target, new JsonMaterializerOptions { MaxDepth = maxDepth });
+        expanded = JsonMaterializer.Expand(target, new JsonMaterializerOptions { MaxDepth = maxDepth });
+        return JexValue.FromJson(expanded);
     }
 }
