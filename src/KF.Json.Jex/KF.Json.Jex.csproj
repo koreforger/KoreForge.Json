@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KF.Json\KF.Json.csproj" />
+    <PackageReference Include="KoreForge.Json" VersionOverride="1.0.1-alpha" />
     <PackageReference Include="KoreForge.Jex" />
   </ItemGroup>
 

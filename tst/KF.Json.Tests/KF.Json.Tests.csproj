@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\KF.Json\KF.Json.csproj" />
+    <PackageReference Include="KoreForge.Json" VersionOverride="1.0.1-alpha" />
   </ItemGroup>
 
 </Project>
