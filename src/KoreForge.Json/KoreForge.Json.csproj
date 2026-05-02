@@ -1,15 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <IsPackable>true</IsPackable>
     <PackageId>KoreForge.Json</PackageId>
     <Description>JSON utilities for the KoreForge ecosystem: zero-allocation route classification and recursive escaped-JSON materialisation.</Description>
     <PackageTags>json;kafka;classifier;materializer;escaped-json</PackageTags>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" />
   </ItemGroup>
-
 </Project>

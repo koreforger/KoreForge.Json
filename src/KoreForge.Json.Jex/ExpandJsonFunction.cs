@@ -1,8 +1,8 @@
-using KF.Json;
+using KoreForge.Json;
 using KoreForge.Jex;
 using Newtonsoft.Json.Linq;
 
-namespace KF.Json.Jex;
+namespace KoreForge.Json.Jex;
 
 /// <summary>
 /// Registers the <c>expandJson(path, maxDepth?)</c> function into the JEX function registry.

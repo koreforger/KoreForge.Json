@@ -2,7 +2,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
-namespace KF.Json;
+namespace KoreForge.Json;
 
 /// <summary>
 /// High-performance classifier that inspects the root-level properties of a UTF-8 JSON

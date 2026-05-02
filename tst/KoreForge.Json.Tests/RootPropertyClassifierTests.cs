@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using FluentAssertions;
 using Xunit;
 
-namespace KF.Json.Tests;
+namespace KoreForge.Json.Tests;
 
 public class RootPropertyClassifierTests
 {

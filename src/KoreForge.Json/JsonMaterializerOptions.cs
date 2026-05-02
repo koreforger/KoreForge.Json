@@ -1,4 +1,4 @@
-namespace KF.Json;
+namespace KoreForge.Json;
 
 /// <summary>
 /// Configuration options for <see cref="JsonMaterializer"/>.

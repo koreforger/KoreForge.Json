@@ -4,10 +4,10 @@ JSON utilities for the KoreForge ecosystem.
 
 ## Components
 
-- **KF.Json** — Core JSON utilities with zero KoreForge dependencies
+- **KoreForge.Json** — Core JSON utilities with zero KoreForge dependencies
   - `RootPropertyClassifier` — UTF-8 zero-allocation early routing for Kafka messages
   - `JsonMaterializer` — Recursive expansion of escaped JSON string values
-- **KF.Json.Jex** — JEX integration bridge (registers `expandJson()` function)
+- **KoreForge.Json.Jex** — JEX integration bridge (registers `expandJson()` function)
 
 ## Installation
 

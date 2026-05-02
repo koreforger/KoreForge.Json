@@ -1,8 +1,8 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src/KF.Json/KF.Json.csproj" />
+    <Project Path="src/KoreForge.Json/KoreForge.Json.csproj" />
   </Folder>
   <Folder Name="/tst/">
-    <Project Path="tst/KF.Json.Tests/KF.Json.Tests.csproj" />
+    <Project Path="tst/KoreForge.Json.Tests/KoreForge.Json.Tests.csproj" />
   </Folder>
 </Solution>

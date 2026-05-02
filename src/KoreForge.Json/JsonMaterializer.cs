@@ -1,6 +1,6 @@
 using Newtonsoft.Json.Linq;
 
-namespace KF.Json;
+namespace KoreForge.Json;
 
 /// <summary>
 /// Recursively walks a <see cref="JToken"/> tree and expands string values

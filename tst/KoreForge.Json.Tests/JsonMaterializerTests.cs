@@ -2,7 +2,7 @@ using FluentAssertions;
 using Newtonsoft.Json.Linq;
 using Xunit;
 
-namespace KF.Json.Tests;
+namespace KoreForge.Json.Tests;
 
 public class JsonMaterializerTests
 {
